@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">RvWithSearch</string>
+    <string name="search">Search</string>
+    <string name="all_results">All Reslts</string>
+    <string name="name_walter_white">Name : Walter White</string>
+    <string name="nickname_heisenberg">NickName: heisenberg</string>
+    <string name="birthday_10_10_2020">birthDay: 10–10–2020</string>
+    <string name="occupation_askdjnfaksjdnfkjasdfjnansdf">ocupattion: askdjnfaksjdnfkjasdfjnansdf</string>
+    <string name="status_alive">Status: Alive</string>
+    <string name="name">"Name: "</string>
+    <string name="birthday">"birthday: "</string>
+    <string name="nickname">"nickname: "</string>
+    <string name="status">"status: "</string>
+    <string name="portrayed">"portrayed: "</string>
+    <string name="appearance">"appearance: "</string>
+    <string name="occupation">"occupation: "</string>
+</resources>
