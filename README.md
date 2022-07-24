@@ -1,6 +1,6 @@
 # HomeWork12
 
-#RecyclerView With Search 
+# RecyclerView With Search 
 
 
 https://user-images.githubusercontent.com/66998427/180667016-ff0d765f-ed29-4891-9c97-dc5e83058b7c.mp4
@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/66998427/180667016-ff0d765f-ed29-4891-
 - You can search characters
 - click on image to open it and see more info about character
 
-#Used
+# Used
 - navigation components including safe args
 - retrofit
 - BaseFragment with and without viewModel
