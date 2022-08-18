@@ -1,10 +1,14 @@
 package com.gabo.rvwithsearch.ui.searchFragment
 
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.view.isVisible
+import androidx.core.widget.doOnTextChanged
+import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
@@ -15,21 +19,22 @@ import com.gabo.rvwithsearch.extensions.onTextChanged
 import com.gabo.rvwithsearch.model.CharacterModel
 import kotlinx.coroutines.launch
 
-class SearchFragment : BaseFragmentWithVM<SearchViewModel, FragmentSearchBinding>() {
+class SearchFragment : BaseFragmentWithVM<SearchViewModel, FragmentSearchBinding>(
+    FragmentSearchBinding::inflate,
+    SearchViewModel::class.java,
+    false
+) {
     private lateinit var adapter: CharactersAdapter
     private var list = listOf<CharacterModel>()
-    override val bindingInflater: (LayoutInflater, ViewGroup?, Boolean) -> FragmentSearchBinding =
-        FragmentSearchBinding::inflate
-
-    override fun getVmClass(): Class<SearchViewModel> = SearchViewModel::class.java
 
     override fun setupView(savedInstanceState: Bundle?) {
         setupAdapter()
+        setupObservers()
         adapter.submitList(list)
         setupSearch()
     }
 
-    override fun setupObservers() {
+    private fun setupObservers() {
         with(viewModel) {
             viewState.observe(viewLifecycleOwner) {
                 if (it.isResponseSuccessful == true) {

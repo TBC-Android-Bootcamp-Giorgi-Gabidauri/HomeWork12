@@ -14,4 +14,5 @@
     <string name="portrayed">"portrayed: "</string>
     <string name="appearance">"appearance: "</string>
     <string name="occupation">"occupation: "</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

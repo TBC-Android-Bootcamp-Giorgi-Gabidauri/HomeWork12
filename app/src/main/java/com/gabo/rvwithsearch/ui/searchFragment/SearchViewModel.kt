@@ -49,3 +49,5 @@ class SearchViewModel : ViewModel() {
         val isLoading: Boolean? = null
     )
 }
+
+

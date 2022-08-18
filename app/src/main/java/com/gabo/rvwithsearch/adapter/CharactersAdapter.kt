@@ -1,5 +1,7 @@
 package com.gabo.rvwithsearch.adapter
 
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Filter
